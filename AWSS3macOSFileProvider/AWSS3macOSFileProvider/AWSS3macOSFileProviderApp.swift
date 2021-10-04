@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct AWSS3macOSFileProviderApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
             ContentView()

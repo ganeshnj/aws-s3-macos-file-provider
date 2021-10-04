@@ -19,6 +19,7 @@
 		1476F007270A83B300FB997C /* FileProviderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476F006270A83B300FB997C /* FileProviderItem.swift */; };
 		1476F009270A83B300FB997C /* FileProviderEnumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476F008270A83B300FB997C /* FileProviderEnumerator.swift */; };
 		1476F00E270A83B300FB997C /* AWSS3macOSFileProviderExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1476EFFF270A83B300FB997C /* AWSS3macOSFileProviderExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1476F014270A83FA00FB997C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476F013270A83FA00FB997C /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		1476F008270A83B300FB997C /* FileProviderEnumerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderEnumerator.swift; sourceTree = "<group>"; };
 		1476F00A270A83B300FB997C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1476F00B270A83B300FB997C /* AWSS3macOSFileProviderExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AWSS3macOSFileProviderExtension.entitlements; sourceTree = "<group>"; };
+		1476F013270A83FA00FB997C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				1476EFD3270A835300FB997C /* ContentView.swift */,
 				1476EFD5270A835500FB997C /* Assets.xcassets */,
 				1476EFD7270A835500FB997C /* Preview Content */,
+				1476F013270A83FA00FB997C /* AppDelegate.swift */,
 			);
 			path = AWSS3macOSFileProvider;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1476F014270A83FA00FB997C /* AppDelegate.swift in Sources */,
 				1476EFD4270A835300FB997C /* ContentView.swift in Sources */,
 				1476EFD2270A835300FB997C /* AWSS3macOSFileProviderApp.swift in Sources */,
 			);
