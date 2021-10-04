@@ -8,8 +8,8 @@
 import FileProvider
 
 class FileProviderExtension: NSObject, NSFileProviderReplicatedExtension {
+    
     required init(domain: NSFileProviderDomain) {
-        // TODO: The containing application must create a domain using `NSFileProviderManager.add(_:, completionHandler:)`. The system will then launch the application extension process, call `FileProviderExtension.init(domain:)` to instantiate the extension for that domain, and call methods on the instance.
         super.init()
     }
     
@@ -55,6 +55,15 @@ class FileProviderExtension: NSObject, NSFileProviderReplicatedExtension {
     }
     
     func enumerator(for containerItemIdentifier: NSFileProviderItemIdentifier, request: NSFileProviderRequest) throws -> NSFileProviderEnumerator {
-        return FileProviderEnumerator(enumeratedItemIdentifier: containerItemIdentifier)
+        switch containerItemIdentifier {
+        case NSFileProviderItemIdentifier.rootContainer:
+            guard let wrapper = try? AWSS3Wrapper() else {
+                throw EnumaratorError.aws
+            }
+
+            return BucketEnumerator(wrapper: wrapper)
+        default:
+            throw EnumaratorError.unsupported
+        }
     }
 }

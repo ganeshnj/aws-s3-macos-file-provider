@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/awslabs/aws-sdk-swift",
         "state": {
           "branch": null,
-          "revision": "2ad9a5bac0982ae8f4885e31cd70c53ecfa92dbd",
-          "version": "0.0.10"
+          "revision": "7c0fdc20bfb29a00bed51bd9653966e480617ca3",
+          "version": "0.0.9"
         }
       },
       {

@@ -36,10 +36,26 @@ class FileProviderItem: NSObject, NSFileProviderItem {
     }
     
     var filename: String {
-        return identifier.rawValue
+        let components = identifier.rawValue.split(separator: "/")
+        guard let last = components.last else {
+            print("[FileProviderItem] last component cannot be nil")
+            return identifier.rawValue
+        }
+        let name = String(last)
+        return name
     }
     
     var contentType: UTType {
-        return identifier == NSFileProviderItemIdentifier.rootContainer ? .folder : .plainText
+        if identifier == NSFileProviderItemIdentifier.rootContainer {
+              return .folder
+          }
+        
+        guard let lastChar = identifier.rawValue.last else {
+            print("[FileProviderItem] last char cannot be nil")
+            return .folder
+        }
+        
+        let type: UTType = lastChar == "/" ? .folder : .item
+        return type
     }
 }
