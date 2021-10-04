@@ -14,6 +14,11 @@
 		1476EFE3270A835500FB997C /* AWSS3macOSFileProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476EFE2270A835500FB997C /* AWSS3macOSFileProviderTests.swift */; };
 		1476EFED270A835500FB997C /* AWSS3macOSFileProviderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476EFEC270A835500FB997C /* AWSS3macOSFileProviderUITests.swift */; };
 		1476EFEF270A835500FB997C /* AWSS3macOSFileProviderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476EFEE270A835500FB997C /* AWSS3macOSFileProviderUITestsLaunchTests.swift */; };
+		1476F002270A83B300FB997C /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1476F001270A83B300FB997C /* UniformTypeIdentifiers.framework */; platformFilter = maccatalyst; };
+		1476F005270A83B300FB997C /* FileProviderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476F004270A83B300FB997C /* FileProviderExtension.swift */; };
+		1476F007270A83B300FB997C /* FileProviderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476F006270A83B300FB997C /* FileProviderItem.swift */; };
+		1476F009270A83B300FB997C /* FileProviderEnumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476F008270A83B300FB997C /* FileProviderEnumerator.swift */; };
+		1476F00E270A83B300FB997C /* AWSS3macOSFileProviderExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1476EFFF270A83B300FB997C /* AWSS3macOSFileProviderExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +36,28 @@
 			remoteGlobalIDString = 1476EFCD270A835300FB997C;
 			remoteInfo = AWSS3macOSFileProvider;
 		};
+		1476F00C270A83B300FB997C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1476EFC6270A835300FB997C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1476EFFE270A83B300FB997C;
+			remoteInfo = AWSS3macOSFileProviderExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1476F00F270A83B300FB997C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1476F00E270A83B300FB997C /* AWSS3macOSFileProviderExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1476EFCE270A835300FB997C /* AWSS3macOSFileProvider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSS3macOSFileProvider.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +70,13 @@
 		1476EFE8270A835500FB997C /* AWSS3macOSFileProviderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWSS3macOSFileProviderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1476EFEC270A835500FB997C /* AWSS3macOSFileProviderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSS3macOSFileProviderUITests.swift; sourceTree = "<group>"; };
 		1476EFEE270A835500FB997C /* AWSS3macOSFileProviderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSS3macOSFileProviderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1476EFFF270A83B300FB997C /* AWSS3macOSFileProviderExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AWSS3macOSFileProviderExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1476F001270A83B300FB997C /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
+		1476F004270A83B300FB997C /* FileProviderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderExtension.swift; sourceTree = "<group>"; };
+		1476F006270A83B300FB997C /* FileProviderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderItem.swift; sourceTree = "<group>"; };
+		1476F008270A83B300FB997C /* FileProviderEnumerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderEnumerator.swift; sourceTree = "<group>"; };
+		1476F00A270A83B300FB997C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1476F00B270A83B300FB997C /* AWSS3macOSFileProviderExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AWSS3macOSFileProviderExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +101,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1476EFFC270A83B300FB997C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1476F002270A83B300FB997C /* UniformTypeIdentifiers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +118,8 @@
 				1476EFD0270A835300FB997C /* AWSS3macOSFileProvider */,
 				1476EFE1270A835500FB997C /* AWSS3macOSFileProviderTests */,
 				1476EFEB270A835500FB997C /* AWSS3macOSFileProviderUITests */,
+				1476F003270A83B300FB997C /* AWSS3macOSFileProviderExtension */,
+				1476F000270A83B300FB997C /* Frameworks */,
 				1476EFCF270A835300FB997C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +130,7 @@
 				1476EFCE270A835300FB997C /* AWSS3macOSFileProvider.app */,
 				1476EFDE270A835500FB997C /* AWSS3macOSFileProviderTests.xctest */,
 				1476EFE8270A835500FB997C /* AWSS3macOSFileProviderUITests.xctest */,
+				1476EFFF270A83B300FB997C /* AWSS3macOSFileProviderExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +171,26 @@
 			path = AWSS3macOSFileProviderUITests;
 			sourceTree = "<group>";
 		};
+		1476F000270A83B300FB997C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1476F001270A83B300FB997C /* UniformTypeIdentifiers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1476F003270A83B300FB997C /* AWSS3macOSFileProviderExtension */ = {
+			isa = PBXGroup;
+			children = (
+				1476F004270A83B300FB997C /* FileProviderExtension.swift */,
+				1476F006270A83B300FB997C /* FileProviderItem.swift */,
+				1476F008270A83B300FB997C /* FileProviderEnumerator.swift */,
+				1476F00A270A83B300FB997C /* Info.plist */,
+				1476F00B270A83B300FB997C /* AWSS3macOSFileProviderExtension.entitlements */,
+			);
+			path = AWSS3macOSFileProviderExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,10 +201,12 @@
 				1476EFCA270A835300FB997C /* Sources */,
 				1476EFCB270A835300FB997C /* Frameworks */,
 				1476EFCC270A835300FB997C /* Resources */,
+				1476F00F270A83B300FB997C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1476F00D270A83B300FB997C /* PBXTargetDependency */,
 			);
 			name = AWSS3macOSFileProvider;
 			productName = AWSS3macOSFileProvider;
@@ -183,6 +249,23 @@
 			productReference = 1476EFE8270A835500FB997C /* AWSS3macOSFileProviderUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		1476EFFE270A83B300FB997C /* AWSS3macOSFileProviderExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1476F012270A83B300FB997C /* Build configuration list for PBXNativeTarget "AWSS3macOSFileProviderExtension" */;
+			buildPhases = (
+				1476EFFB270A83B300FB997C /* Sources */,
+				1476EFFC270A83B300FB997C /* Frameworks */,
+				1476EFFD270A83B300FB997C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AWSS3macOSFileProviderExtension;
+			productName = AWSS3macOSFileProviderExtension;
+			productReference = 1476EFFF270A83B300FB997C /* AWSS3macOSFileProviderExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +287,9 @@
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 1476EFCD270A835300FB997C;
 					};
+					1476EFFE270A83B300FB997C = {
+						CreatedOnToolsVersion = 13.0;
+					};
 				};
 			};
 			buildConfigurationList = 1476EFC9270A835300FB997C /* Build configuration list for PBXProject "AWSS3macOSFileProvider" */;
@@ -222,6 +308,7 @@
 				1476EFCD270A835300FB997C /* AWSS3macOSFileProvider */,
 				1476EFDD270A835500FB997C /* AWSS3macOSFileProviderTests */,
 				1476EFE7270A835500FB997C /* AWSS3macOSFileProviderUITests */,
+				1476EFFE270A83B300FB997C /* AWSS3macOSFileProviderExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -244,6 +331,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1476EFE6270A835500FB997C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1476EFFD270A83B300FB997C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,6 +373,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1476EFFB270A83B300FB997C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1476F005270A83B300FB997C /* FileProviderExtension.swift in Sources */,
+				1476F007270A83B300FB997C /* FileProviderItem.swift in Sources */,
+				1476F009270A83B300FB997C /* FileProviderEnumerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -291,6 +395,11 @@
 			isa = PBXTargetDependency;
 			target = 1476EFCD270A835300FB997C /* AWSS3macOSFileProvider */;
 			targetProxy = 1476EFE9270A835500FB997C /* PBXContainerItemProxy */;
+		};
+		1476F00D270A83B300FB997C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1476EFFE270A83B300FB997C /* AWSS3macOSFileProviderExtension */;
+			targetProxy = 1476F00C270A83B300FB997C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -413,6 +522,7 @@
 		1476EFF3270A835500FB997C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +552,7 @@
 		1476EFF4270A835500FB997C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -564,6 +675,60 @@
 			};
 			name = Release;
 		};
+		1476F010270A83B300FB997C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AWSS3macOSFileProviderExtension/AWSS3macOSFileProviderExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7WH2QJ9575;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AWSS3macOSFileProviderExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AWSS3macOSFileProviderExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ganeshnj.AWSS3macOSFileProvider.AWSS3macOSFileProviderExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1476F011270A83B300FB997C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AWSS3macOSFileProviderExtension/AWSS3macOSFileProviderExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7WH2QJ9575;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AWSS3macOSFileProviderExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AWSS3macOSFileProviderExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ganeshnj.AWSS3macOSFileProvider.AWSS3macOSFileProviderExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -599,6 +764,15 @@
 			buildConfigurations = (
 				1476EFF9270A835500FB997C /* Debug */,
 				1476EFFA270A835500FB997C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1476F012270A83B300FB997C /* Build configuration list for PBXNativeTarget "AWSS3macOSFileProviderExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1476F010270A83B300FB997C /* Debug */,
+				1476F011270A83B300FB997C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
