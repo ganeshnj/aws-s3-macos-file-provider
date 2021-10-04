@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AwsCrt",
+        "repositoryURL": "https://github.com/awslabs/aws-crt-swift.git",
+        "state": {
+          "branch": null,
+          "revision": "fcedf0c8441c3ac09511f1e06b193a1b67753d89",
+          "version": "0.0.9"
+        }
+      },
+      {
+        "package": "AWSSwiftSDK",
+        "repositoryURL": "https://github.com/awslabs/aws-sdk-swift",
+        "state": {
+          "branch": null,
+          "revision": "2ad9a5bac0982ae8f4885e31cd70c53ecfa92dbd",
+          "version": "0.0.10"
+        }
+      },
+      {
+        "package": "ClientRuntime",
+        "repositoryURL": "https://github.com/awslabs/smithy-swift.git",
+        "state": {
+          "branch": null,
+          "revision": "32bc69a474d7ee15ddf761028ebdc7cdd56e5f2c",
+          "version": "0.0.9"
+        }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log.git",
+        "state": {
+          "branch": null,
+          "revision": "5d66f7ba25daf4f94100e7022febf3c75e37a6c7",
+          "version": "1.4.2"
+        }
+      },
+      {
+        "package": "XMLCoder",
+        "repositoryURL": "https://github.com/MaxDesiatov/XMLCoder.git",
+        "state": {
+          "branch": null,
+          "revision": "887de88b37b2d691d67db950770e09776229cf6d",
+          "version": "0.13.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

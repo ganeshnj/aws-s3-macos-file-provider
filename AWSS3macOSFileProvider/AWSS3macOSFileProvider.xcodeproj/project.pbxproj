@@ -20,6 +20,7 @@
 		1476F009270A83B300FB997C /* FileProviderEnumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476F008270A83B300FB997C /* FileProviderEnumerator.swift */; };
 		1476F00E270A83B300FB997C /* AWSS3macOSFileProviderExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1476EFFF270A83B300FB997C /* AWSS3macOSFileProviderExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1476F014270A83FA00FB997C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476F013270A83FA00FB997C /* AppDelegate.swift */; };
+		1476F017270A861D00FB997C /* AWSS3 in Frameworks */ = {isa = PBXBuildFile; productRef = 1476F016270A861D00FB997C /* AWSS3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1476F017270A861D00FB997C /* AWSS3 in Frameworks */,
 				1476F002270A83B300FB997C /* UniformTypeIdentifiers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +267,9 @@
 			dependencies = (
 			);
 			name = AWSS3macOSFileProviderExtension;
+			packageProductDependencies = (
+				1476F016270A861D00FB997C /* AWSS3 */,
+			);
 			productName = AWSS3macOSFileProviderExtension;
 			productReference = 1476EFFF270A83B300FB997C /* AWSS3macOSFileProviderExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -304,6 +309,9 @@
 				Base,
 			);
 			mainGroup = 1476EFC5270A835300FB997C;
+			packageReferences = (
+				1476F015270A860A00FB997C /* XCRemoteSwiftPackageReference "aws-sdk-swift" */,
+			);
 			productRefGroup = 1476EFCF270A835300FB997C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -782,6 +790,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1476F015270A860A00FB997C /* XCRemoteSwiftPackageReference "aws-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/awslabs/aws-sdk-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1476F016270A861D00FB997C /* AWSS3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1476F015270A860A00FB997C /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = AWSS3;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1476EFC6270A835300FB997C /* Project object */;
 }
