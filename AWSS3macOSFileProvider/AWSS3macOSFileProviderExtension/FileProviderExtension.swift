@@ -57,13 +57,15 @@ class FileProviderExtension: NSObject, NSFileProviderReplicatedExtension {
     func enumerator(for containerItemIdentifier: NSFileProviderItemIdentifier, request: NSFileProviderRequest) throws -> NSFileProviderEnumerator {
         switch containerItemIdentifier {
         case NSFileProviderItemIdentifier.rootContainer:
-            guard let wrapper = try? AWSS3Wrapper() else {
-                throw EnumaratorError.aws
-            }
-
-            return BucketEnumerator(wrapper: wrapper)
+            return BucketEnumerator()
+        case  NSFileProviderItemIdentifier.workingSet:
+            break
+        case NSFileProviderItemIdentifier.trashContainer:
+            break
         default:
-            throw EnumaratorError.unsupported
+            return ObjectEnumerator(parent: containerItemIdentifier)
         }
+        
+        throw EnumaratorError.unsupported
     }
 }

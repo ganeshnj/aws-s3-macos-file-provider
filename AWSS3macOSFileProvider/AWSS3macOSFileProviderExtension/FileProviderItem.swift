@@ -24,7 +24,15 @@ class FileProviderItem: NSObject, NSFileProviderItem {
     }
     
     var parentItemIdentifier: NSFileProviderItemIdentifier {
-        return .rootContainer
+        var components = identifier.rawValue.split(separator: "/")
+        if components.count == 1 {
+            return .rootContainer
+        }
+        
+        _ = components.popLast()
+        let parentIdentifier = components.joined(separator: "/")
+        let parent = NSFileProviderItemIdentifier(parentIdentifier + "/")
+        return parent
     }
     
     var capabilities: NSFileProviderItemCapabilities {
@@ -37,25 +45,16 @@ class FileProviderItem: NSObject, NSFileProviderItem {
     
     var filename: String {
         let components = identifier.rawValue.split(separator: "/")
-        guard let last = components.last else {
-            print("[FileProviderItem] last component cannot be nil")
-            return identifier.rawValue
-        }
-        let name = String(last)
+        let name = String(components.last ?? "")
         return name
     }
     
     var contentType: UTType {
         if identifier == NSFileProviderItemIdentifier.rootContainer {
-              return .folder
-          }
-        
-        guard let lastChar = identifier.rawValue.last else {
-            print("[FileProviderItem] last char cannot be nil")
             return .folder
         }
         
-        let type: UTType = lastChar == "/" ? .folder : .item
+        let type: UTType = identifier.rawValue.last! == "/" ? .folder : .item
         return type
     }
 }
